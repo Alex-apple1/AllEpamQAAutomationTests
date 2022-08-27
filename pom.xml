@@ -14,27 +14,34 @@
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+    <testng.configs.path>${project.build.testOutputDirectory}/testng</testng.configs.path>
+    <testng.suite.file>${testng.configs.path}/HW5.cucumber.suite.xml</testng.suite.file>
+
     <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/runAllTests.xml
     </maven-surefire-plugin.suiteXmlFile>
     <testng.configs.path>${project.build.testOutputDirectory}/testng</testng.configs.path>
     <testng.suite.file>${testng.configs.path}/hw4.class.suite.xml</testng.suite.file>
 
     <checkstyle.version>8.42</checkstyle.version>
+    <logback-classic.version>1.2.5</logback-classic.version>
     <testng.version>7.4.0</testng.version>
-    <assertj-core.version>3.4.1</assertj-core.version>
+    <assertj-core.version>3.20.2</assertj-core.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
     <junit.version>4.13.2</junit.version>
-    <allure.version>2.13.2</allure.version>
+    <allure.version>2.14.0</allure.version>
     <aspectj.version>1.9.5</aspectj.version>
     <lombok.version>1.18.20</lombok.version>
-    <allure-java-commons.version>2.13.2</allure-java-commons.version>
-    <allure-maven.version>2.11.2</allure-maven.version>
+    <allure-java-commons.version>2.14.0</allure-java-commons.version>
+    <allure-maven.version>2.10.0</allure-maven.version>
     <selenium-support.version>3.141.59</selenium-support.version>
     <selenium-chrome-driver.version>4.0.0-alpha-7</selenium-chrome-driver.version>
     <selenium-api.version>4.0.0-alpha-7</selenium-api.version>
     <webdrivermanager.version>4.4.3</webdrivermanager.version>
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+    <cucumber.version>6.11.0</cucumber.version>
+    <cucumber-java.version>6.11.0</cucumber-java.version>
+    <cucumber-testng.version>6.11.0</cucumber-testng.version>
   </properties>
 
   <build>
@@ -76,6 +83,9 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
         <configuration>
+          <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+          </argLine>
           <suiteXmlFiles>
             <suiteXmlFile>${maven-surefire-plugin.suiteXmlFile}</suiteXmlFile>
           </suiteXmlFiles>
@@ -86,6 +96,13 @@
   </build>
 
   <profiles>
+    <profile>
+      <id>runHW5Tests-cucumber</id>
+      <properties>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/HW5.cucumber.suite.xml</maven-surefire-plugin.suiteXmlFile>
+        <!--                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>-->
+      </properties>
+    </profile>
     <profile>
       <id>runHW4Tests</id>
       <properties>
@@ -122,6 +139,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+    </dependency>
+    <dependency>
       <groupId>calculator</groupId>
       <artifactId>calculator</artifactId>
       <scope>system</scope>
@@ -138,6 +160,18 @@
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>${cucumber-testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber-java.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -180,6 +214,16 @@
       <artifactId>allure-java-commons</artifactId>
       <version>${allure-java-commons.version}</version>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-cucumber6-jvm</artifactId>
+      <version>${allure.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback-classic.version}</version>
     </dependency>
   </dependencies>
   <reporting>
