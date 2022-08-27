@@ -23,18 +23,19 @@
     <testng.suite.file>${testng.configs.path}/hw4.class.suite.xml</testng.suite.file>
 
     <checkstyle.version>8.42</checkstyle.version>
+    <lombok.version>1.18.20</lombok.version>
     <logback-classic.version>1.2.5</logback-classic.version>
     <testng.version>7.4.0</testng.version>
     <assertj-core.version>3.20.2</assertj-core.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
     <junit.version>4.13.2</junit.version>
-    <allure.version>2.14.0</allure.version>
     <aspectj.version>1.9.5</aspectj.version>
-    <lombok.version>1.18.20</lombok.version>
+    <allure.version>2.14.0</allure.version>
     <allure-java-commons.version>2.14.0</allure-java-commons.version>
     <allure-maven.version>2.10.0</allure-maven.version>
     <selenium-support.version>3.141.59</selenium-support.version>
+    <selenium-java.version>3.141.59</selenium-java.version>
     <selenium-chrome-driver.version>4.0.0-alpha-7</selenium-chrome-driver.version>
     <selenium-api.version>4.0.0-alpha-7</selenium-api.version>
     <webdrivermanager.version>4.4.3</webdrivermanager.version>
@@ -99,7 +100,8 @@
     <profile>
       <id>runHW5Tests-cucumber</id>
       <properties>
-        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/HW5.cucumber.suite.xml</maven-surefire-plugin.suiteXmlFile>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/HW5.cucumber.suite.xml
+        </maven-surefire-plugin.suiteXmlFile>
         <!--                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>-->
       </properties>
     </profile>
@@ -198,6 +200,11 @@
       <version>${selenium-support.version}</version>
     </dependency>
     <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium-java.version}</version>
+    </dependency>
+    <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-testng</artifactId>
       <version>${allure.version}</version>
@@ -224,6 +231,12 @@
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>${logback-classic.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-api</artifactId>
+      <version>4.0.0-alpha-7</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
   <reporting>
