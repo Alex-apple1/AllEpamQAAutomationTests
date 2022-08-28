@@ -108,52 +108,79 @@
 
   <profiles>
     <profile>
-      <id>Selenium-hw6-selenium-grid</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+      <id>hw1.runAddAndSubtractTests</id>
       <properties>
-        <!--                <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw6.selenium.grid.suite.xml</maven-surefire-plugin.suiteXmlFile>-->
-        <testng.suite.file>${testng.configs.path}/hw7.jdi.suite.xml</testng.suite.file>
-<!--        <testng.suite.file>${testng.configs.path}/hw6.selenium.grid.suite.xml</testng.suite.file>-->
-      </properties>
-    </profile>
-    <profile>
-      <id>runHW5Tests-cucumber</id>
-      <properties>
-        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/HW5.cucumber.suite.xml</maven-surefire-plugin.suiteXmlFile>
-        <!--                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>-->
-      </properties>
-    </profile>
-    <profile>
-      <id>runHW4Tests</id>
-      <properties>
-        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw4.class.suite.xml
-        </maven-surefire-plugin.suiteXmlFile>
-        <!--                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>-->
-      </properties>
-    </profile>
-    <profile>
-      <id>runAddAndSubtractTests</id>
-      <properties>
-        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/runAddAndSubtractTests.xml
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw1.runAddAndSubtractTests.xml
         </maven-surefire-plugin.suiteXmlFile>
       </properties>
     </profile>
     <profile>
-      <id>runAllTests</id>
+      <id>hw1.runAllTests</id>
       <properties>
-        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/runAllTests.xml
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw1.runAllTests.xml
         </maven-surefire-plugin.suiteXmlFile>
       </properties>
     </profile>
     <profile>
-      <id>runMultiplyAndDivideTests</id>
+      <id>hw1.runMultiplyAndDivideTests</id>
       <properties>
-        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/runMultiplyAndDivideTests.xml
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw1.runMultiplyAndDivideTests.xml
         </maven-surefire-plugin.suiteXmlFile>
       </properties>
     </profile>
+    <profile>
+      <id>hw2.jdiSiteTestsUsingCssAndXpaths</id>
+      <properties>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw2.jdiSiteTestsUsingCssAndXpaths.xml
+        </maven-surefire-plugin.suiteXmlFile>
+      </properties>
+    </profile>
+    <profile>
+      <id>hw3.jdiSiteTestsUsingPageObjects</id>
+      <properties>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw3.jdiSiteTestsUsingPageObjects.xml
+        </maven-surefire-plugin.suiteXmlFile>
+      </properties>
+    </profile>
+    <profile>
+      <id>hw4.jdiSiteTestsPlusAllure</id>
+      <properties>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw4.jdiSiteTestsPlusAllure.xml
+        </maven-surefire-plugin.suiteXmlFile>
+      </properties>
+    </profile>
+    <profile>
+      <id>hw5.cucumber.suite</id>
+      <properties>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw5.cucumber.suite.xml
+        </maven-surefire-plugin.suiteXmlFile>
+      </properties>
+    </profile>
+    <profile>
+      <id>hw6.selenium.grid.suite</id>
+      <properties>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw6.selenium.grid.suite.xml
+        </maven-surefire-plugin.suiteXmlFile>
+      </properties>
+    </profile>
+    <profile>
+      <id>hw7.jdi.suite</id>
+      <properties>
+        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw7.jdi.suite.xml
+        </maven-surefire-plugin.suiteXmlFile>
+      </properties>
+    </profile>
+<!--    <profile>-->
+<!--      <id>Selenium-hw6-selenium-grid</id>-->
+<!--      <activation>-->
+<!--        <activeByDefault>true</activeByDefault>-->
+<!--      </activation>-->
+<!--      <properties>-->
+<!--        &lt;!&ndash;                <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw6.selenium.grid.suite.xml</maven-surefire-plugin.suiteXmlFile>&ndash;&gt;-->
+<!--        <testng.suite.file>${testng.configs.path}/hw7.jdi.suite.xml</testng.suite.file>-->
+<!--&lt;!&ndash;        <testng.suite.file>${testng.configs.path}/hw6.selenium.grid.suite.xml</testng.suite.file>&ndash;&gt;-->
+<!--      </properties>-->
+<!--    </profile>-->
   </profiles>
 
   <dependencies>
