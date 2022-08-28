@@ -11,7 +11,6 @@
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
-
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 <!--    <testng.configs.path>${project.build.testOutputDirectory}/testng</testng.configs.path>-->
@@ -38,13 +37,12 @@
     <lombok.version>1.18.20</lombok.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-    <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+    <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
     <selenium-support.version>3.141.59</selenium-support.version>
     <selenium-chrome-driver.version>4.0.0-alpha-7</selenium-chrome-driver.version>
     <selenium-api.version>4.0.0-alpha-7</selenium-api.version>
     <testng.version>7.4.0</testng.version>
     <webdrivermanager.version>4.4.3</webdrivermanager.version>
-
   </properties>
 
   <build>
@@ -65,7 +63,7 @@
             <!--  pay attention to use exact url for checkstyle plugin ruleset  -->
             https://raw.githubusercontent.com/DmitryKhodakovsky/epam-training-center-code-checkers-configurations/main/checkstyle/checkstyle.xml
           </configLocation>
-          <encoding>${project.build.sourceEncoding}</encoding>
+<!--          <encoding>${project.build.sourceEncoding}</encoding>-->
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <consoleOutput>true</consoleOutput>
           <failsOnError>true</failsOnError>
@@ -102,7 +100,6 @@
           </dependency>
         </dependencies>
       </plugin>
-
     </plugins>
   </build>
 
@@ -308,11 +305,11 @@
       <artifactId>allure-cucumber6-jvm</artifactId>
       <version>${allure.version}</version>
     </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>${logback-classic.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>ch.qos.logback</groupId>-->
+<!--      <artifactId>logback-classic</artifactId>-->
+<!--      <version>${logback-classic.version}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest</artifactId>

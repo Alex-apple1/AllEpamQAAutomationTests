@@ -19,6 +19,7 @@ public class DifferentElementsPage extends AbstractBasePage {
     private WebElement dropdown;
     @FindBy(tagName = "option")
     private List<WebElement> dropdownItems;
+
     @FindBy(xpath = "//*[@id='mCSB_2_container']/section[1]/div[2]/div/ul/li[4]")
     private WebElement waterCondition;
     @FindBy(xpath = "//*[@id='mCSB_2_container']/section[1]/div[2]/div/ul/li[3]")
@@ -31,6 +32,8 @@ public class DifferentElementsPage extends AbstractBasePage {
     private List<WebElement> logGetText;
     @FindBy(xpath = "//*[@class='panel-body-list logs']")
     private List<WebElement> logDataPath;
+
+    //    private CheckboxesRadioDropboxComponent checkboxesRadioDropboxComponent;
 
     public DifferentElementsPage(WebDriver driver) {
         super(driver);

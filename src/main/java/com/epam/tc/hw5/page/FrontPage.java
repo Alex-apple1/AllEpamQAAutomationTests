@@ -11,4 +11,5 @@ public class FrontPage extends AbstractBasePage {
     public void open() {
         openFrontPage("");
     }
+
 }
