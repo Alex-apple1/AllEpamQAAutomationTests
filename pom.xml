@@ -20,7 +20,7 @@
     <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/runAllTests.xml
     </maven-surefire-plugin.suiteXmlFile>
     <testng.configs.path>${project.build.testOutputDirectory}/testng</testng.configs.path>
-    <testng.suite.file>${testng.configs.path}/hw4.class.suite.xml</testng.suite.file>
+<!--    <testng.suite.file>${testng.configs.path}/hw4.class.suite.xml</testng.suite.file>-->
 
     <checkstyle.version>8.42</checkstyle.version>
     <lombok.version>1.18.20</lombok.version>
@@ -36,6 +36,7 @@
     <allure-maven.version>2.10.0</allure-maven.version>
     <selenium-support.version>3.141.59</selenium-support.version>
     <selenium-java.version>3.141.59</selenium-java.version>
+    <selenium.version>3.141.59</selenium.version>
     <selenium-chrome-driver.version>4.0.0-alpha-7</selenium-chrome-driver.version>
     <selenium-api.version>4.0.0-alpha-7</selenium-api.version>
     <webdrivermanager.version>4.4.3</webdrivermanager.version>
@@ -88,15 +89,31 @@
             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
           </argLine>
           <suiteXmlFiles>
-            <suiteXmlFile>${maven-surefire-plugin.suiteXmlFile}</suiteXmlFile>
+<!--            <suiteXmlFile>${maven-surefire-plugin.suiteXmlFile}</suiteXmlFile>-->
+            <suiteXmlFile>${testng.suite.file}</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
     </plugins>
   </build>
 
   <profiles>
+<!--    <profile>-->
+<!--      <id>runHW5Tests-cucumber</id>-->
+<!--      <properties>-->
+<!--        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/HW5.cucumber.suite.xml-->
+<!--        </maven-surefire-plugin.suiteXmlFile>-->
+        <!--                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>-->
+<!--      </properties>-->
+<!--    </profile>-->
     <profile>
       <id>runHW5Tests-cucumber</id>
       <properties>
@@ -105,18 +122,17 @@
         <!--                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>-->
       </properties>
     </profile>
-    <profile>
-      <id>runHW4Tests</id>
-      <properties>
-        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw4.class.suite.xml
-        </maven-surefire-plugin.suiteXmlFile>
-        <!--                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>-->
-      </properties>
-    </profile>
+<!--    <profile>-->
+<!--      <id>runHW4Tests</id>-->
+<!--      <properties>-->
+<!--        <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw4.class.suite.xml-->
+<!--        </maven-surefire-plugin.suiteXmlFile>-->
+<!--        &lt;!&ndash;                <testng.suite.file>${testng.configs.path}/testng/hw4.class.suite.xml</testng.suite.file>&ndash;&gt;-->
+<!--      </properties>-->
+<!--    </profile>-->
     <profile>
       <id>runAddAndSubtractTests</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
         <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/runAddAndSubtractTests.xml
