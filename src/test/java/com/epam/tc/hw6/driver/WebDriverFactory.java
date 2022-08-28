@@ -16,15 +16,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class WebDriverFactory {
-
     private static final String CHROME = "chrome";
     private static final String FIREFOX = "firefox";
-
     private static final String REMOTE_DRIVER_TYPE = "remote";
     private static final String LOCAL_DRIVER_TYPE = "LOCAL";
 
     public static WebDriver createWebDriver(final String driverType, final String browserName) {
-
         if (REMOTE_DRIVER_TYPE.equalsIgnoreCase(driverType)) {
             return createRemoteWebDriver(browserName);
         } else if (LOCAL_DRIVER_TYPE.equalsIgnoreCase(driverType)) {
@@ -35,7 +32,6 @@ public final class WebDriverFactory {
     }
 
     /* Local Web Driver creation */
-
     private static WebDriver createLocalDriver(final String browserName) {
         WebDriver driver;
         switch (browserName.toLowerCase(Locale.ROOT)) {
@@ -48,7 +44,6 @@ public final class WebDriverFactory {
             default:
                 throw new IllegalArgumentException(String.format("Unsupported browser: %s", browserName));
         }
-
         return driver;
     }
 
@@ -63,7 +58,6 @@ public final class WebDriverFactory {
     }
 
     /* Remote Web Driver creation */
-
     private static WebDriver createRemoteWebDriver(final String browserName) {
         Capabilities capabilities = null;
         if (CHROME.equalsIgnoreCase(browserName)) {

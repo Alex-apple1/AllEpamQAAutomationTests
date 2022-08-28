@@ -12,10 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 public class AbstractBaseSeleniumTest {
-
     private FrontPage frontPage;
     private DifferentElementsPage differentElementsPage;
-
 
     @BeforeMethod
     public void setUp(ITestContext testContext) {

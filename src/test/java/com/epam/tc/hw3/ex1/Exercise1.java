@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Exercise1 {
-
     private WebDriver webDriver;
     private FrontPage frontPage;
     private String frontPageUrl = "https://jdi-testing.github.io/jdi-light/index.html";
@@ -96,4 +95,3 @@ public class Exercise1 {
         webDriver.close();
     }
 }
-

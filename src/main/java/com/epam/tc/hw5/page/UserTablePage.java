@@ -12,7 +12,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class UserTablePage extends AbstractBasePage {
-
     @FindBy(tagName = "select")
     private List<WebElement> numberTypeDropdowns;
     @FindBy(css = "tr td a")
@@ -31,8 +30,6 @@ public class UserTablePage extends AbstractBasePage {
     private List<WebElement> logDataPath;
     @FindBy(id = "ivan")
     private WebElement sergeyIvan;
-    //    @FindBy(xpath = "//*[@type='checkbox']")
-    //    private List<WebElement> sergeyIvan;
     @FindBy(css = ".info-panel-section ul")
     private WebElement logRowsQuantity;
     @FindBy(css = ".info-panel-section li")
@@ -72,13 +69,6 @@ public class UserTablePage extends AbstractBasePage {
     public void selectVipCheckBoxOnUserTablePage() {
         wait.until(ExpectedConditions.visibilityOf(sergeyIvan)).click();
     }
-
-    //    public void selectVipCheckBoxOnUserTablePage(String sergeyIvanVipCheckbox) {
-    //        wait.until(visibilityOfAllElements(sergeyIvan))
-    //            .stream()
-    //            .filter(i -> i.getText().contains(sergeyIvanVipCheckbox))
-    //            .collect(Collectors.toList()).stream().findFirst().get().click();
-    //    }
 
     public List<WebElement> logRowsQuantity() {
         return wait.until(visibilityOfAllElements(logRowsQuantity));

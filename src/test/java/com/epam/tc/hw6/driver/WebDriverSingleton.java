@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class WebDriverSingleton {
-
     private static WebDriver driver;
 
     public static WebDriver getDriver() {

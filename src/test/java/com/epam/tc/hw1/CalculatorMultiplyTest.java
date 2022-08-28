@@ -14,5 +14,4 @@ public class CalculatorMultiplyTest extends ParentCalculatorClass {
                 .as("Multiplication result")
                 .isEqualTo(result);
     }
-
 }

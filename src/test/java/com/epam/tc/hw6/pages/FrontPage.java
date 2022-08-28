@@ -9,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FrontPage {
-
     WebDriver webDriver;
     WebElement webElement;
 

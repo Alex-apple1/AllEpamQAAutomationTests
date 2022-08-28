@@ -11,7 +11,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HeaderComponent extends AbstractComponent {
-
     private static final String BASE_URL = "https://jdi-testing.github.io/jdi-light/index.html";
 
     private String loginName = "Roman";

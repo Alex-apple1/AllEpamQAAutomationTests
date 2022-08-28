@@ -12,12 +12,10 @@ import com.epam.tc.hw7.forms.LoginForm;
 @Url("/index.html")
 @Title("Home Page")
 public class Homepage extends WebPage {
-
     public LoginForm loginForm;
 
     @UI("#user-name")
     public static Label userName;
-
     @UI(".uui-navigation.nav.navbar-nav.m-l8")
     public static Menu headerButtons;
 

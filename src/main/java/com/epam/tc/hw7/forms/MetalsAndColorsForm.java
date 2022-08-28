@@ -11,40 +11,31 @@ import com.epam.jdi.light.ui.html.elements.complex.RadioButtons;
 import com.epam.tc.hw7.entities.MetalsAndColorsData;
 
 public class MetalsAndColorsForm extends Form<MetalsAndColorsData> {
-
     @UI("[name=custom_radio_odd]")
     public static RadioButtons customRadioOdd;
-
     @UI("[name=custom_radio_even]")
     public static RadioButtons customRadioEven;
-
     @UI("section[id=elements-checklist] input")
     public static Checklist elementsChecklist;
-
     @JDropdown(root = "div[ui=dropdown]",
                value = ".filter-option",
                list = "li",
                expand = ".caret")
     public static Dropdown colors;
-
     @JDropdown(root = "div[ui=combobox]",
                value = ".filter-option",
                list = "li",
                expand = ".caret")
     public static Dropdown metals;
-
     @UI("#vegetables")
     Button vegetable;
-
     @JDropdown(root = "div[ui=droplist]",
                value = ".filter-option",
                list = "li",
                expand = ".caret")
     public static Dropdown vegetablesMultiDropdown;
-
     @UI("#g7")
     public static Checkbox vegetablesCheckBox;
-
     @UI("[id=submit-button]")
     public static Button submitButton;
 

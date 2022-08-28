@@ -7,7 +7,6 @@ import com.epam.tc.hw5.page.UserTablePage;
 import org.openqa.selenium.WebDriver;
 
 public abstract class AbstractStep {
-
     protected FrontPage frontPage;
     protected DifferentElementsPage differentElementsPage;
     protected UserTablePage userTablePage;
@@ -18,6 +17,5 @@ public abstract class AbstractStep {
         frontPage = new FrontPage(driver);
         differentElementsPage = new DifferentElementsPage(driver);
         userTablePage = new UserTablePage(driver);
-
     }
 }

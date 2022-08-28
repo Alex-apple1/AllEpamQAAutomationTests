@@ -5,7 +5,6 @@ import io.cucumber.java.en.Given;
 public class GivenStep extends AbstractStep {
 
     //    Ex1 and Ex2 and Ex3
-
     @Given("I open JDI GitHub site")
     public void openFrontPage() {
         frontPage.open();

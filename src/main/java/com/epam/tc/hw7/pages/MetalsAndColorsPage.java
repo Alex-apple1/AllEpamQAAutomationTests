@@ -18,12 +18,10 @@ import java.util.stream.Collectors;
 @Url("/metals-colors.html")
 @Title("Metal and Colors")
 public class MetalsAndColorsPage extends WebPage {
-
     public LoginForm loginForm;
 
     @UI("form")
     public static MetalsAndColorsForm metalsAndColorsForm;
-
     @UI(".results li")
     private List<UIElement> actualResult;
 

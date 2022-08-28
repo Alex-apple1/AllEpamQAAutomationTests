@@ -14,9 +14,9 @@
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <testng.configs.path>${project.build.testOutputDirectory}/testng</testng.configs.path>
-<!--    <testng.suite.file>${testng.configs.path}/HW5.cucumber.suite.xml</testng.suite.file>-->
-    <testng.suite.file>${testng.configs.path}/hw7.jdi.suite.xml</testng.suite.file>
+<!--    <testng.configs.path>${project.build.testOutputDirectory}/testng</testng.configs.path>-->
+<!--&lt;!&ndash;    <testng.suite.file>${testng.configs.path}/HW5.cucumber.suite.xml</testng.suite.file>&ndash;&gt;-->
+<!--    <testng.suite.file>${testng.configs.path}/hw7.jdi.suite.xml</testng.suite.file>-->
 
     <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/runAllTests.xml
     </maven-surefire-plugin.suiteXmlFile>

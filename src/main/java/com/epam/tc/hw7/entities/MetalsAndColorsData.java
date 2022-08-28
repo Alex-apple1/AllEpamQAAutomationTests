@@ -8,7 +8,6 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class MetalsAndColorsData extends DataClass<MetalsAndColorsData> {
-
     private final List<String> summary;
     private final List<String> elements;
     private final String color;

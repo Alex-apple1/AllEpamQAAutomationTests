@@ -7,11 +7,9 @@ import java.util.List;
 import org.assertj.core.api.SoftAssertions;
 
 public class AssertionStep extends AbstractStep {
-
     SoftAssertions softAssertions = new SoftAssertions();
 
     //    Ex1
-
     @Then("I check if 'checkbox, radio button, dropdown names' and theirs statuses are corresponding to selected")
     public void allSelectedProductsShouldBeVisibleOnCompareProductsPage() {
 
@@ -21,12 +19,9 @@ public class AssertionStep extends AbstractStep {
 
         softAssertions.assertThat(differentElementsPage.logBodyText()).contains(checkboxes);
         softAssertions.assertThat(differentElementsPage.logBodyText()).contains(radio);
-//        softAssertions.assertThat(differentElementsPage.logBodyText()).contains(dropbox);
-        //        softAssertions.assertAll();
     }
 
     //    Ex2
-
     @Then("{string} page should be opened")
     public void userTablePageIsOpened(String userTablePageIsOpened) {
         softAssertions.assertThat(userTablePage.getTitle()).isEqualTo(userTablePageIsOpened);
@@ -63,11 +58,9 @@ public class AssertionStep extends AbstractStep {
     }
 
     //    Ex3
-
     @Then("1 log row has {string} text in log section")
     public void logRowHasVipText(String inLogSectionText) {
         softAssertions.assertThat(userTablePage.logRowsQuantity()).hasSize(1);
         softAssertions.assertThat(userTablePage.logRowText()).contains(inLogSectionText);
     }
 }
-

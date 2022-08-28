@@ -11,5 +11,4 @@ public enum User {
     private final String name;
     private final String password;
     private final String fullName;
-
 }

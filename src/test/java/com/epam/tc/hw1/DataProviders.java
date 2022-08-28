@@ -27,5 +27,4 @@ public class DataProviders {
 
         return new Object[][]{{1, 1, 1}, {2, 2, 4}, {-2, -3, 6}};
     }
-
 }

@@ -22,7 +22,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Exercise2 {
-
     private WebDriver webDriver;
     private WebElement webElement;
     private DifferentElementsPage differentElementsPage;
@@ -108,4 +107,3 @@ public class Exercise2 {
         webDriver.close();
     }
 }
-

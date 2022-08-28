@@ -113,6 +113,7 @@ public class Exercise1 extends ParentClass {
             .containsExactlyElementsOf(expectedLeftSectionMenu);
 
         //        12. Close Browser
+
+        webDriver.close();
     }
 }
-

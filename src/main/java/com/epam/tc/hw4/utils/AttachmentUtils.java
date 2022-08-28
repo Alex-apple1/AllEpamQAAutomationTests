@@ -8,14 +8,12 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class AttachmentUtils {
-
     public void attachFromInputStream(final String name, InputStream inputStream) {
         Allure.addAttachment(name, inputStream);
     }
 
     @Attachment
     public String makeStringAttachment(List<String> attachmentStrings) {
-
         return attachmentStrings.toString();
     }
 

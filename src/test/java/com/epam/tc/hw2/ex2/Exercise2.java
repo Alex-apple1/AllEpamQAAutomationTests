@@ -99,6 +99,7 @@ public class Exercise2 extends ParentClass {
             .contains("Colors: value changed to Yellow");
 
         //        10. Close Browser
+
+        webDriver.close();
     }
 }
-

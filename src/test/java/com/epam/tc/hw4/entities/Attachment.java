@@ -11,7 +11,6 @@ import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
 public class Attachment {
-
     public static final String CAT_URL =
         "https://upload.wikimedia.org/wikipedia/commons/b/b6/Felis_catus-cat_on_snow.jpg";
 

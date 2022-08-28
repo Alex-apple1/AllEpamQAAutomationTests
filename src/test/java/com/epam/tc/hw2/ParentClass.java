@@ -8,9 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class ParentClass {
-
     protected WebDriver webDriver;
-
     protected WebElement webElement;
 
     @BeforeTest(alwaysRun = true)
