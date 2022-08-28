@@ -23,7 +23,7 @@
     <testng.suite.file>${testng.configs.path}/hw4.class.suite.xml</testng.suite.file>
 
     <allure-java-commons.version>2.14.0</allure-java-commons.version>
-    <allure-maven.version>2.10.0</allure-maven.version>
+    <allure-maven.version>2.8.0</allure-maven.version>
     <allure.version>2.14.0</allure.version>
     <aspectj.version>1.9.5</aspectj.version>
     <assertj-core.version>3.20.2</assertj-core.version>
@@ -63,7 +63,6 @@
             <!--  pay attention to use exact url for checkstyle plugin ruleset  -->
             https://raw.githubusercontent.com/DmitryKhodakovsky/epam-training-center-code-checkers-configurations/main/checkstyle/checkstyle.xml
           </configLocation>
-<!--          <encoding>${project.build.sourceEncoding}</encoding>-->
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <consoleOutput>true</consoleOutput>
           <failsOnError>true</failsOnError>
@@ -167,17 +166,6 @@
         </maven-surefire-plugin.suiteXmlFile>
       </properties>
     </profile>
-<!--    <profile>-->
-<!--      <id>Selenium-hw6-selenium-grid</id>-->
-<!--      <activation>-->
-<!--        <activeByDefault>true</activeByDefault>-->
-<!--      </activation>-->
-<!--      <properties>-->
-<!--        &lt;!&ndash;                <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/hw6.selenium.grid.suite.xml</maven-surefire-plugin.suiteXmlFile>&ndash;&gt;-->
-<!--        <testng.suite.file>${testng.configs.path}/hw7.jdi.suite.xml</testng.suite.file>-->
-<!--&lt;!&ndash;        <testng.suite.file>${testng.configs.path}/hw6.selenium.grid.suite.xml</testng.suite.file>&ndash;&gt;-->
-<!--      </properties>-->
-<!--    </profile>-->
   </profiles>
 
   <dependencies>
@@ -302,14 +290,19 @@
     </dependency>
     <dependency>
       <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-maven</artifactId>
+      <version>2.8</version>
+    </dependency>
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
       <artifactId>allure-cucumber6-jvm</artifactId>
       <version>${allure.version}</version>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>ch.qos.logback</groupId>-->
-<!--      <artifactId>logback-classic</artifactId>-->
-<!--      <version>${logback-classic.version}</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback-classic.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest</artifactId>
